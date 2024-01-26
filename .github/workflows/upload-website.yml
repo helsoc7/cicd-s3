@@ -38,7 +38,8 @@ jobs:
 
 
 
-
+      - name: Create AWS directory
+        run: mkdir -p ~/.aws
 
 
       - name: Configure AWS CLI
