@@ -43,5 +43,4 @@ jobs:
 
       - name: Deploy to S3 using AWS CLI
         run: |
-          yarn run deploy
           aws s3 cp build/ s3://react-gh-action-s3-helen/ --recursive
