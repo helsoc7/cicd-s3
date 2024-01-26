@@ -30,8 +30,14 @@ jobs:
       - name: Build app
         run: npm run build
 
-      - name: Create AWS directory
-        run: mkdir -p ~/.aws
+      - name: Install AWS CLI
+        run: |
+          curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+
+
+
 
 
       - name: Configure AWS CLI
