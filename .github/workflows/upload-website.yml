@@ -30,6 +30,10 @@ jobs:
       - name: Build app
         run: npm run build
 
+      - name: Create AWS directory
+        run: mkdir -p ~/.aws
+
+
       - name: Configure AWS CLI
         run: |
           echo "[default]" > ~/.aws/config
